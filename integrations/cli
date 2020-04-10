@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+const yargs = require('yargs');
+const pkg = require('../package.json');
+const server = require('./server');
+
+const argv = yargs
+  .config('config')
+  .usage('$0 [options] <source>')
+  .options({
+    port: {
+      alias: 'p',
+      description: 'Set port',
+      default: 3000,
+    },
+
+    host: {
+      alias: 'H',
+      description: 'Set host',
+      default: 'localhost',
+    },
+
+    watch: {
+      alias: 'w',
+      description: 'Watch file(s)',
+    },
+
+    'no-cors': {
+      alias: 'nc',
+      description: 'Disable Cross-Origin Resource Sharing',
+    },
+
+    delay: {
+      alias: 'd',
+      description: 'Add delay to responses (ms)',
+    },
+  })
+  .string('watch')
+  .boolean('no-cors')
+  .help('help')
+  .alias('help', 'h')
+  .version(pkg.version)
+  .alias('version', 'v')
+  .example('$0 db.json', '')
+  .require(1, 'Missing <source> argument').argv;
+
+server(argv);

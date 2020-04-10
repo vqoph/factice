@@ -6,17 +6,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vincent Sandt",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vqoph/json-server-lite"
+  },
+  "bin": {
+    "jsl": "integrations/cli"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chalk": "^4.0.0",
+    "chokidar": "^3.3.1",
+    "cli-columns": "^3.1.2",
     "cors": "^2.8.5",
+    "dayjs": "^1.8.24",
     "express": "^4.17.1",
     "json-server": "^0.16.1",
     "lodash": "^4.17.15",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
+    "nodemon": "^2.0.2",
     "pluralize": "^8.0.0",
-    "url-pattern": "^1.0.3"
+    "url-pattern": "^1.0.3",
+    "winston": "^3.2.1",
+    "yargs": "^15.3.1"
   }
 }
