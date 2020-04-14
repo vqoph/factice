@@ -4,10 +4,11 @@
   "description": "Adaptation of the typecode/json-server library with a functional approach",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "exit 0"
   },
   "author": "Vincent Sandt",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/vqoph/json-server-lite"

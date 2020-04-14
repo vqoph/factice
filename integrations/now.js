@@ -1,9 +1,11 @@
 const router = require('../lib/router');
 const createActions = require('../lib/actions');
 const startupLog = require('../lib/startupLog');
+const database = require('../lib/db');
 
-const api = require(process.cwd() + (process.env.JSON_MOCKS || '/mocks/api.json'));
-const db = database(api);
-const actions = createActions(db);
-startupLog('', actions);
-module.exports = router({ actions });
+module.exports = (data) => {
+  const db = database(data);
+  const actions = createActions(db);
+  startupLog('', actions);
+  return router({ actions });
+};

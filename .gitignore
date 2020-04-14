@@ -117,3 +117,6 @@ dist
 
 # editors
 .vscode
+.now
+
+tests/now/package-lock.json
