@@ -1,8 +1,12 @@
 {
-  "todos": [
-    { "text": "Create a db.json file", "id": 1, "price": 20 },
-    { "text": "Create a db.json test", "id": 2, "price": 20 },
-    { "text": "Create a db.json file", "id": 3, "price": 20 },
-    { "text": "Create a db.json file", "id": 4, "price": 20 }
-  ]
+  "plurals": [
+    { "text": "lorem ipsum", "id": "first", "price": 20 },
+    { "text": "Dolor adipisicing nostrud deserunt", "id": "second", "price": 20 },
+    { "text": "Cex consectetur fugiat incididunt", "id": "third", "price": 20 },
+    { "text": "in officia velit eiusmod.", "id": "fourth", "price": 20 }
+  ],
+  "singular": {
+    "text": "Lorem ipsum",
+    "price": 40
+  }
 }

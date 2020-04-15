@@ -1,7 +1,7 @@
 # TODO
 
-- [ ] Clean dev and test environment
-- [ ] Remove res call in CRUD functions (singular & plurals)
+- [x] Clean dev and test environment
+- [x] Remove res call in CRUD functions (singular & plurals)
 - [ ] Nested resources
 - [ ] LHS brackets filters
 - [ ] Enable pagination without underscores

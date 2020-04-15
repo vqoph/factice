@@ -8,7 +8,7 @@ const database = require('../lib/db');
 const router = require('../lib/router');
 const logger = require('../lib/logger');
 const loggerMiddleware = require('../lib/loggerMiddleware');
-const createActions = require('../lib/actions');
+const createActionsFromDB = require('../lib/createActionsFromDB');
 const startupLog = require('../lib/startupLog');
 
 module.exports = (config) => {
@@ -25,7 +25,7 @@ module.exports = (config) => {
   const api = require(path.resolve(process.cwd() + '/' + source));
 
   const db = database(api);
-  const actions = createActions(db);
+  const actions = createActionsFromDB(db);
   const app = express();
 
   app.use([
