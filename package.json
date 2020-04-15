@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "exit 0",
-    "dev": "export NODE_ENV=development; nodemon --ext js,json -w . --exec jsl ./tests/devserver/sample-db.json"
+    "dev": "nodemon --ext js,json -w . --exec 'npm run serve'",
+    "serve": "export NODE_ENV=development; jsl ./tests/devserver/sample-db.json"
   },
   "author": "Vincent Sandt",
   "license": "MIT",

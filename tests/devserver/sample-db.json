@@ -7,6 +7,7 @@
   ],
   "singular": {
     "text": "Lorem ipsum",
-    "price": 40
+    "price": 40,
+    "test": "truc"
   }
 }

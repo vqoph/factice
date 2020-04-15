@@ -21,7 +21,11 @@ const argv = yargs
 
     watch: {
       alias: 'w',
-      description: 'Watch file(s)',
+      description: 'Watch source',
+    },
+
+    watchFiles: {
+      description: 'specify file(s) to watch',
     },
 
     'no-cors': {
@@ -34,7 +38,8 @@ const argv = yargs
       description: 'Add delay to responses (ms)',
     },
   })
-  .string('watch')
+  .boolean('watch')
+  .string('watchFiles')
   .boolean('no-cors')
   .help('help')
   .alias('help', 'h')
