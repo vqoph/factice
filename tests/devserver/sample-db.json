@@ -9,5 +9,9 @@
     "text": "Lorem ipsum",
     "price": 40,
     "test": "truc"
-  }
+  },
+  "sub-resource": [
+    { "text": "I am a sub resource", "id": "first", "pluralId": "first" },
+    { "text": "I am a sub resource", "id": "first", "pluralId": "second" }
+  ]
 }

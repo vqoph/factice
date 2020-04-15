@@ -16,9 +16,9 @@ module.exports = (config) => {
     _: [source],
     port,
     host,
-    'no-cors': noCors,
     watch,
     watchFiles,
+    'no-cors': noCors,
   } = config;
 
   let server = null;
@@ -26,7 +26,7 @@ module.exports = (config) => {
   const api = require(path.resolve(process.cwd() + '/' + source));
 
   const db = database(api);
-  const actions = createActionsFromDB(db);
+  const actions = createActionsFromDB(db, config);
   const app = express();
 
   app.use([
@@ -52,17 +52,11 @@ module.exports = (config) => {
     });
   }
 
-  console.log(watch);
   if (watch || watchFiles) {
-    console.log(watchFiles);
-    const watcher = chokidar.watch(
-      (watchFiles && typeof watchFiles === 'string' && watchFiles.toString()) ||
-        source,
-      {
-        ignored: [/(^|[\/\\])\../, (path) => path.includes('node_modules')],
-        persistent: true,
-      }
-    );
+    const watcher = chokidar.watch((watchFiles && watchFiles.toString()) || source, {
+      ignored: [/(^|[\/\\])\../, (path) => path.includes('node_modules')],
+      persistent: true,
+    });
 
     watcher.on('all', (event, path) => {
       switch (event) {
