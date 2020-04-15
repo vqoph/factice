@@ -40,8 +40,7 @@ module.exports = (config) => {
 
   function start() {
     server = app.listen(port, () => {
-      logger.info('Start server', { scope: 'server' });
-      startupLog(`Server listening at http://${host}:${port}/api`, actions);
+      startupLog({ host, port, actions });
     });
   }
 
@@ -75,5 +74,6 @@ module.exports = (config) => {
     });
   }
 
+  logger.info('Start server', { scope: 'server' });
   start();
 };
