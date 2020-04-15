@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Clean dev and test environment
 - [ ] Remove res call in CRUD functions (singular & plurals)
 - [ ] Nested resources
 - [ ] LHS brackets filters

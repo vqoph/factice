@@ -22,13 +22,10 @@ module.exports = (config) => {
 
   let server = null;
 
-  const api = require(source
-    ? path.resolve(process.cwd() + '/' + source)
-    : '../sample-db.json');
+  const api = require(path.resolve(process.cwd() + '/' + source));
 
   const db = database(api);
   const actions = createActions(db);
-
   const app = express();
 
   app.use([
