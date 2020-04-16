@@ -10,8 +10,11 @@
     "price": 40,
     "test": "truc"
   },
-  "sub-resource": [
+  "sub-resources": [
     { "text": "I am a sub resource", "id": "first", "pluralId": "first" },
     { "text": "I am a sub resource", "id": "first", "pluralId": "second" }
+  ],
+  "sub-sub-resources": [
+    { "text": "I am a sub sub resource", "id": "first", "subResourceId": "first" }
   ]
 }
