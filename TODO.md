@@ -3,7 +3,7 @@
 - [x] Clean dev and test environment
 - [x] Remove res call in CRUD functions (singular & plurals)
 - [x] Nested resources
-- [ ] LHS brackets filters
+- [ ] LHS brackets & RHS colons filters
 - [ ] Enable pagination without underscores
 - [ ] Cypress integration
 - [ ] Multiple json named files
