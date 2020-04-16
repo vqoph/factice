@@ -7,9 +7,9 @@ const bodyParser = require('body-parser');
 const database = require('../lib/db');
 const router = require('../lib/router');
 const logger = require('../lib/logger');
-const loggerMiddleware = require('../lib/loggerMiddleware');
-const createActionsFromDB = require('../lib/createActionsFromDB');
-const startupLog = require('../lib/startupLog');
+const loggerMiddleware = require('../lib/logger-middleware');
+const createActionsFromDB = require('../lib/actions-reducer');
+const startupLog = require('../lib/startup-log');
 
 module.exports = (config) => {
   const {
