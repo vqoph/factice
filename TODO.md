@@ -5,12 +5,14 @@
 - [x] Nested resources
 - [x] LHS brackets & RHS colons filters
 - [x] Enable pagination without underscores
-- [ ] tests with newman
+- [ ] Tests with newman and postman collection generation
 - [ ] Cypress integration
 - [ ] Multiple json named files
 - [ ] Webpack integration
 - [ ] Fake Authentications
 - [ ] Persist database
+- [ ] Rename project
 - [ ] Write documentation
-- [ ] UI
+- [ ] Design a pretty logo
+- [ ] Server UI
 - [ ] CLI generate mock

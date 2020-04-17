@@ -1,5 +1,5 @@
 const router = require('../lib/router');
-const createActionsFromDB = require('../lib/actions-reducer');
+const createActionsFromDB = require('../lib/actions/reducer');
 const startupLog = require('../lib/startup-log');
 const database = require('../lib/db');
 

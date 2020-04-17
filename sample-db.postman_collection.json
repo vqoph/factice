@@ -1,0 +1,1326 @@
+{
+  "info": {
+    "name": "sample-db",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "plurals",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "{{plural-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "{{plural-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "{{plural-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "{{plural-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "singular",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/singular",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "singular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "singular",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/singular",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "singular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "singular",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/singular",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "singular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "singular",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/singular",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "singular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "singular",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/singular",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "singular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/sub-resources",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/sub-resources/:id",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources/:id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "plurals/:id/sub-resources/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "plurals",
+            ":id",
+            "sub-resources",
+            "{{sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/sub-sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/sub-sub-resources",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources/:id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-sub-resources/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/sub-sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/sub-sub-resources/:id",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources/:id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "sub-resources/:id/sub-sub-resources/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "protocol": "{{protocol}}",
+          "host": [
+            "{{host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "api",
+            "sub-resources",
+            ":id",
+            "sub-sub-resources",
+            "{{sub-sub-resource-id}}"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "protocol",
+      "value": "http",
+      "type": "string"
+    },
+    {
+      "key": "host",
+      "value": "localhost",
+      "type": "string"
+    },
+    {
+      "key": "port",
+      "value": "3000",
+      "type": "string"
+    },
+    {
+      "key": "plural-id",
+      "value": "first",
+      "type": "string"
+    },
+    {
+      "key": "sub-resource-id",
+      "value": "first",
+      "type": "string"
+    },
+    {
+      "key": "sub-sub-resource-id",
+      "value": "first",
+      "type": "string"
+    }
+  ]
+}
