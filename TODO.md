@@ -5,7 +5,7 @@
 - [x] Nested resources
 - [x] LHS brackets & RHS colons filters
 - [x] Enable pagination without underscores
-- [ ] Tests with newman and postman collection generation
+- [x] Tests with newman and postman collection generation
 - [ ] Cypress integration
 - [ ] Multiple json named files
 - [ ] Webpack integration

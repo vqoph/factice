@@ -6,6 +6,19 @@
   "item": [
     {
       "name": "plurals",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -32,6 +45,19 @@
     },
     {
       "name": "plurals",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -58,6 +84,19 @@
     },
     {
       "name": "plurals/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -85,6 +124,19 @@
     },
     {
       "name": "plurals/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -112,6 +164,19 @@
     },
     {
       "name": "plurals/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -139,6 +204,19 @@
     },
     {
       "name": "plurals/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -166,6 +244,19 @@
     },
     {
       "name": "singular",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"singular:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -192,6 +283,19 @@
     },
     {
       "name": "singular",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"singular:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -218,6 +322,19 @@
     },
     {
       "name": "singular",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"singular:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -244,6 +361,19 @@
     },
     {
       "name": "singular",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"singular:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -270,6 +400,19 @@
     },
     {
       "name": "singular",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"singular:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -296,6 +439,19 @@
     },
     {
       "name": "sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -322,6 +478,19 @@
     },
     {
       "name": "sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -347,7 +516,20 @@
       }
     },
     {
-      "name": "plurals/sub-resources",
+      "name": "plurals/:id/sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -359,7 +541,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -368,13 +550,27 @@
           "path": [
             "api",
             "plurals",
+            "{{plural-id}}",
             "sub-resources"
           ]
         }
       }
     },
     {
-      "name": "plurals/sub-resources",
+      "name": "plurals/:id/sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -386,7 +582,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -395,118 +591,7 @@
           "path": [
             "api",
             "plurals",
-            "sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "plurals/:id/sub-resources",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
-            ":id",
-            "sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "plurals/:id/sub-resources",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
-            ":id",
-            "sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "plurals/:id/sub-resources",
-      "request": {
-        "method": "PATCH",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
-            ":id",
-            "sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "plurals/:id/sub-resources",
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
-            ":id",
+            "{{plural-id}}",
             "sub-resources"
           ]
         }
@@ -514,6 +599,19 @@
     },
     {
       "name": "sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -541,6 +639,19 @@
     },
     {
       "name": "sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -568,6 +679,19 @@
     },
     {
       "name": "sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -595,6 +719,19 @@
     },
     {
       "name": "sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -621,7 +758,20 @@
       }
     },
     {
-      "name": "plurals/sub-resources/:id",
+      "name": "plurals/:id/sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources/:id:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -633,7 +783,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources/{{sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources/{{sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -642,34 +792,7 @@
           "path": [
             "api",
             "plurals",
-            "sub-resources",
-            "{{sub-resource-id}}"
-          ]
-        }
-      }
-    },
-    {
-      "name": "plurals/sub-resources/:id",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/sub-resources/{{sub-resource-id}}",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
+            "{{plural-id}}",
             "sub-resources",
             "{{sub-resource-id}}"
           ]
@@ -678,35 +801,19 @@
     },
     {
       "name": "plurals/:id/sub-resources/:id",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources/:id:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
           }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "plurals",
-            ":id",
-            "sub-resources",
-            "{{sub-resource-id}}"
-          ]
         }
-      }
-    },
-    {
-      "name": "plurals/:id/sub-resources/:id",
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -718,7 +825,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources/{{sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -727,7 +834,7 @@
           "path": [
             "api",
             "plurals",
-            ":id",
+            "{{plural-id}}",
             "sub-resources",
             "{{sub-resource-id}}"
           ]
@@ -736,6 +843,19 @@
     },
     {
       "name": "plurals/:id/sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources/:id:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -747,7 +867,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources/{{sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -756,7 +876,7 @@
           "path": [
             "api",
             "plurals",
-            ":id",
+            "{{plural-id}}",
             "sub-resources",
             "{{sub-resource-id}}"
           ]
@@ -765,6 +885,19 @@
     },
     {
       "name": "plurals/:id/sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"plurals/:id/sub-resources/:id:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -776,7 +909,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/:id/sub-resources/{{sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/plurals/{{plural-id}}/sub-resources/{{sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -785,7 +918,7 @@
           "path": [
             "api",
             "plurals",
-            ":id",
+            "{{plural-id}}",
             "sub-resources",
             "{{sub-resource-id}}"
           ]
@@ -794,6 +927,19 @@
     },
     {
       "name": "sub-sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -820,6 +966,19 @@
     },
     {
       "name": "sub-sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -845,7 +1004,20 @@
       }
     },
     {
-      "name": "sub-resources/sub-sub-resources",
+      "name": "sub-resources/:id/sub-sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -857,7 +1029,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -866,13 +1038,27 @@
           "path": [
             "api",
             "sub-resources",
+            "{{sub-resource-id}}",
             "sub-sub-resources"
           ]
         }
       }
     },
     {
-      "name": "sub-resources/sub-sub-resources",
+      "name": "sub-resources/:id/sub-sub-resources",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources:POST status\", () => {",
+              "  pm.expect(pm.response.to.have.status('Created'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [
@@ -884,7 +1070,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -893,118 +1079,7 @@
           "path": [
             "api",
             "sub-resources",
-            "sub-sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "sub-resources/:id/sub-sub-resources",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
-            ":id",
-            "sub-sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "sub-resources/:id/sub-sub-resources",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
-            ":id",
-            "sub-sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "sub-resources/:id/sub-sub-resources",
-      "request": {
-        "method": "PATCH",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
-            ":id",
-            "sub-sub-resources"
-          ]
-        }
-      }
-    },
-    {
-      "name": "sub-resources/:id/sub-sub-resources",
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
-            ":id",
+            "{{sub-resource-id}}",
             "sub-sub-resources"
           ]
         }
@@ -1012,6 +1087,19 @@
     },
     {
       "name": "sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources/:id:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -1039,6 +1127,19 @@
     },
     {
       "name": "sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources/:id:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -1066,6 +1167,19 @@
     },
     {
       "name": "sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources/:id:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -1093,6 +1207,19 @@
     },
     {
       "name": "sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-sub-resources/:id:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -1119,7 +1246,20 @@
       }
     },
     {
-      "name": "sub-resources/sub-sub-resources/:id",
+      "name": "sub-resources/:id/sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources/:id:GET status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [
@@ -1131,7 +1271,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources/{{sub-sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources/{{sub-sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -1140,34 +1280,7 @@
           "path": [
             "api",
             "sub-resources",
-            "sub-sub-resources",
-            "{{sub-sub-resource-id}}"
-          ]
-        }
-      }
-    },
-    {
-      "name": "sub-resources/sub-sub-resources/:id",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/sub-sub-resources/{{sub-sub-resource-id}}",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
+            "{{sub-resource-id}}",
             "sub-sub-resources",
             "{{sub-sub-resource-id}}"
           ]
@@ -1176,35 +1289,19 @@
     },
     {
       "name": "sub-resources/:id/sub-sub-resources/:id",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources/:id:PUT status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
           }
-        ],
-        "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
-          "protocol": "{{protocol}}",
-          "host": [
-            "{{host}}"
-          ],
-          "port": "{{port}}",
-          "path": [
-            "api",
-            "sub-resources",
-            ":id",
-            "sub-sub-resources",
-            "{{sub-sub-resource-id}}"
-          ]
         }
-      }
-    },
-    {
-      "name": "sub-resources/:id/sub-sub-resources/:id",
+      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -1216,7 +1313,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources/{{sub-sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -1225,7 +1322,7 @@
           "path": [
             "api",
             "sub-resources",
-            ":id",
+            "{{sub-resource-id}}",
             "sub-sub-resources",
             "{{sub-sub-resource-id}}"
           ]
@@ -1234,6 +1331,19 @@
     },
     {
       "name": "sub-resources/:id/sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources/:id:PATCH status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -1245,7 +1355,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources/{{sub-sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -1254,7 +1364,7 @@
           "path": [
             "api",
             "sub-resources",
-            ":id",
+            "{{sub-resource-id}}",
             "sub-sub-resources",
             "{{sub-sub-resource-id}}"
           ]
@@ -1263,6 +1373,19 @@
     },
     {
       "name": "sub-resources/:id/sub-sub-resources/:id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"sub-resources/:id/sub-sub-resources/:id:DELETE status\", () => {",
+              "  pm.expect(pm.response.to.have.status('OK'));",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [
@@ -1274,7 +1397,7 @@
           }
         ],
         "url": {
-          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/:id/sub-sub-resources/{{sub-sub-resource-id}}",
+          "raw": "{{protocol}}://{{host}}:{{port}}/api/sub-resources/{{sub-resource-id}}/sub-sub-resources/{{sub-sub-resource-id}}",
           "protocol": "{{protocol}}",
           "host": [
             "{{host}}"
@@ -1283,7 +1406,7 @@
           "path": [
             "api",
             "sub-resources",
-            ":id",
+            "{{sub-resource-id}}",
             "sub-sub-resources",
             "{{sub-sub-resource-id}}"
           ]
@@ -1304,7 +1427,7 @@
     },
     {
       "key": "port",
-      "value": "3000",
+      "value": "3001",
       "type": "string"
     },
     {

@@ -120,3 +120,4 @@ dist
 .now
 
 tests/*/package-lock.json
+tests/newman/sample-db.postman_collection.json
