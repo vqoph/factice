@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "concurrently --kill-others 'serve ./public' 'cypress run'",
+    "open": "concurrently --kill-others 'serve ./public' 'cypress open'",
+    "factice": "factice run ./sample-db.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.4.0"
+    "concurrently": "^5.2.0",
+    "cypress": "^4.5.0",
+    "factice": "file:../../..",
+    "serve": "^11.3.0"
+  },
+  "dependencies": {
+    "uuid": "^8.0.0"
   }
 }
