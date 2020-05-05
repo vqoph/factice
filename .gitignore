@@ -119,4 +119,5 @@ dist
 .vscode
 .now
 
-tests/now/package-lock.json
+tests/*/package-lock.json
+tests/newman/sample-db.postman_collection.json

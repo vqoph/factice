@@ -1,23 +1,30 @@
 {
-  "name": "json-server-lite",
+  "name": "factice",
   "version": "1.0.0",
-  "description": "Adaptation of the typecode/json-server library with a functional approach",
+  "description": "Mock a REST api from json files",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "exit 0"
+    "test": "npm run test:e2e:generate && npm run test:e2e",
+    "test:e2e:generate": "./bin/cli postman -p 3001 -d ./tests/newman/ ./tests/integrations/devserver/sample-db.json",
+    "test:newman": "newman run ./tests/newman/sample-db.postman_collection.json",
+    "test:e2e": "concurrently  --kill-others --success=first 'npm:test:newman' 'npm:test:run:server'",
+    "test:run:server": "export NODE_ENV=production; ./bin/cli run -p=3001 --fake=true --quiet=true ./tests/newman/sample-db.json",
+    "build": "exit 0",
+    "dev": "nodemon --ext js,json -w . --exec 'npm run serve'",
+    "serve": "export NODE_ENV=development; ./bin/cli run ./tests/integrations/devserver/sample-db.json"
   },
   "author": "Vincent Sandt",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vqoph/json-server-lite"
+    "url": "https://github.com/vqoph/factice"
   },
   "bin": {
-    "jsl": "integrations/cli"
+    "jsl": "bin/cli"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "camelcase": "^6.0.0",
     "chalk": "^4.0.0",
     "chokidar": "^3.3.1",
     "cli-columns": "^3.1.2",
@@ -28,10 +35,14 @@
     "lodash": "^4.17.15",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
-    "nodemon": "^2.0.2",
     "pluralize": "^8.0.0",
-    "url-pattern": "^1.0.3",
+    "url": "^0.11.0",
     "winston": "^3.2.1",
     "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "newman": "^5.0.0",
+    "nodemon": "^2.0.3"
   }
 }
