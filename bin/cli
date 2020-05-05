@@ -1,0 +1,125 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const yargs = require('yargs');
+const pkg = require('../package.json');
+const server = require('../lib/server');
+const logger = require('../lib/logger/logger');
+const generatePostman = require('../lib/postman/collection');
+
+const argv =
+  //
+  yargs
+    .usage('$0 [options] <command> <source>')
+    .command('run', 'Run server', (yargs) => {
+      yargs
+        .options({
+          watch: {
+            alias: 'w',
+            description: 'Watch source',
+          },
+
+          watchFiles: {
+            description: 'specify file(s) to watch',
+          },
+
+          'no-cors': {
+            alias: 'nc',
+            description: 'Disable Cross-Origin Resource Sharing',
+          },
+
+          delay: {
+            alias: 'd',
+            description: 'Add delay to responses (ms)',
+          },
+          port: {
+            alias: 'p',
+            description: 'Set port',
+            default: 3000,
+          },
+
+          host: {
+            alias: 'H',
+            description: 'Set host',
+            default: 'localhost',
+          },
+          fake: {
+            alias: 'f',
+            description: 'Fake Create, update, delete response',
+            default: false,
+          },
+          quiet: {
+            alias: 'q',
+            description: 'no log output',
+            default: false,
+          },
+        })
+        .boolean('watch')
+        .string('watchFiles')
+        .boolean('no-cors')
+        .boolean('fake')
+        .boolean('quiet')
+        .help('help')
+        .alias('help', 'h')
+        .version(pkg.version)
+        .alias('version', 'v')
+        .example('$0 <command> db.json ', '')
+        .require(1, 'Missing <source> argument');
+    })
+
+    .command('postman', 'Generate postman collection from source file', (yargs) => {
+      yargs
+        .options({
+          port: {
+            alias: 'p',
+            description: 'Set port',
+            default: 3000,
+          },
+
+          host: {
+            alias: 'H',
+            description: 'Set host',
+            default: 'localhost',
+          },
+          destination: {
+            alias: 'd',
+            description: 'Destination folder',
+            default: '.',
+          },
+        })
+
+        .example('$0 postman db.json ', '')
+        .example('$0 postman db.json -d ./postman', '')
+        .require(1, 'Missing <source> argument');
+    })
+    .example('$0 <command> db.json ', '')
+    .example('$0 <command> -h', 'Get command help')
+    .help('help')
+    .alias('help', 'h')
+    .version(pkg.version)
+    .alias('version', 'v').argv;
+
+const {
+  _: [command, source],
+  ...cliArguments
+} = argv;
+
+switch (command) {
+  case 'run':
+    // Run server with supplied db path
+    server({ source, ...cliArguments });
+    break;
+
+  case 'postman':
+    // Generate a postman collection using path
+    const name = source.split('/').pop().replace('.json', '');
+    fs.writeFileSync(
+      `${cliArguments.destination || '/'}${name}.postman_collection.json`,
+      JSON.stringify(generatePostman({ source, name, ...cliArguments }), null, 2)
+    );
+
+    break;
+
+  default:
+    logger.error(`Unrecognized command ${command}`, { scope: 'cli' });
+    break;
+}

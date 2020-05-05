@@ -1,4 +1,5 @@
-const router = require('./lib/router');
+const router = require('./lib/router/router');
 const database = require('./lib/db');
-const createActionsFromDB = require('./lib/actions-reducer');
-module.exports = { router, database, createActionsFromDB };
+const createActions = require('./lib/actions/reducer');
+const now = require('./integrations');
+module.exports = { router, database, createActions, now };
