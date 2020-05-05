@@ -8,7 +8,7 @@
   "singular": {
     "text": "Lorem ipsum",
     "price": 40,
-    "test": "truc"
+    "test": "lorem ipsum"
   },
   "sub-resources": [
     { "text": "I am a sub resource", "id": "first", "pluralId": "first" },

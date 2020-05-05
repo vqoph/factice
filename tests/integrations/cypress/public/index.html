@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cypress Factice example</title>
+    <style>
+      pre {
+        height: 350px;
+        width: 600px;
+        float: left;
+        border: solid 1px #ddd;
+        overflow: auto;
+        padding: 1rem;
+        background-color: #eee;
+      }
+      .buttons {
+        float: left;
+        margin-top: 10vh;
+        margin-left: 100px;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="resultTarget"></pre>
+    <div class="buttons">
+      <button onclick="fetchPlurals()" data-cy="fetchPlurals">Get plurals</button>
+      <button onclick="fetchPlural()" data-cy="fetchPlural">Get plural</button>
+    </div>
+    <script src="./axios.min.js" type="text/javascript"></script>
+    <script>
+      let resultTarget = document.getElementById('resultTarget');
+
+      async function fetchPlurals() {
+        try {
+          const response = await axios.get('http://localhost:3000/api/plurals');
+          resultTarget.innerText = JSON.stringify(response.data, null, 4);
+        } catch (e) {
+          resultTarget.innerText = e;
+        }
+      }
+
+      async function fetchPlural() {
+        try {
+          const response = await axios.get(
+            'http://localhost:3000/api/plurals/second'
+          );
+          resultTarget.innerText = JSON.stringify(response.data, null, 4);
+        } catch (e) {
+          resultTarget.innerText = e;
+        }
+      }
+    </script>
+  </body>
+</html>

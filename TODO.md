@@ -6,12 +6,13 @@
 - [x] LHS brackets & RHS colons filters
 - [x] Enable pagination without underscores
 - [x] Tests with newman and postman collection generation
-- [ ] Cypress integration
+- [x] Cypress integration
 - [ ] Multiple json named files
+- [ ] GraphQL support
+- [ ] Persist database
 - [ ] Webpack integration
 - [ ] Fake Authentications
-- [ ] Persist database
-- [ ] Rename project
+- [x] Rename project
 - [ ] Write documentation
 - [ ] Design a pretty logo
 - [ ] Server UI
