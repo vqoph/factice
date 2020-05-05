@@ -1,7 +1,7 @@
 {
-  "name": "json-server-lite",
+  "name": "factice",
   "version": "1.0.0",
-  "description": "Adaptation of the typecode/json-server library with a functional approach",
+  "description": "Mock a REST api from json files",
   "main": "index.js",
   "scripts": {
     "test": "npm run test:e2e:generate && npm run test:e2e",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vqoph/json-server-lite"
+    "url": "https://github.com/vqoph/factice"
   },
   "bin": {
     "jsl": "bin/cli"

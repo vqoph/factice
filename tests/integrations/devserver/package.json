@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server-lite": "file:../.."
+    "factice": "file:../.."
   }
 }

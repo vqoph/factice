@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server-lite": "file:json-server-lite-1.0.0.tgz"
+    "factice": "file:factice-1.0.0.tgz"
   }
 }
