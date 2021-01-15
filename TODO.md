@@ -6,13 +6,16 @@
 - [x] LHS brackets & RHS colons filters
 - [x] Enable pagination without underscores
 - [x] Tests with newman and postman collection generation
+- [x] Rename project
 - [x] Cypress integration
+- [ ] Refactor action
+- [ ] Recursive resource nesting with limit
 - [ ] Multiple json named files
+- [ ] allow passthrough
 - [ ] GraphQL support
 - [ ] Persist database
 - [ ] Webpack integration
 - [ ] Fake Authentications
-- [x] Rename project
 - [ ] Write documentation
 - [ ] Design a pretty logo
 - [ ] Server UI
