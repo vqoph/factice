@@ -17,7 +17,6 @@
  */
 
 module.exports = (on, config) => {
-  //on('before:browser:launch', facticePlugin({ facticeDb: './sample-db.json' }));
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 };

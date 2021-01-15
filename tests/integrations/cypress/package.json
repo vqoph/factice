@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "concurrently --kill-others 'serve ./public' 'cypress run'",
-    "open": "concurrently --kill-others 'serve ./public' 'cypress open'",
-    "factice": "factice run ./sample-db.json"
+    "test": "concurrently --kill-others 'serve ./public' 'npm:factice' 'cypress run'",
+    "open": "concurrently --kill-others 'serve ./public' 'npm:factice' 'cypress open'",
+    "factice": "\"./../../../bin/cli\" run \"./../../fixtures/sample-db.json\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "cypress": "^4.5.0",
+    "cypress": "^6.2.1",
     "factice": "file:../../..",
     "serve": "^11.3.0"
   },
