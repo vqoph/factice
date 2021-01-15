@@ -1,6 +1,6 @@
 const router = require('./lib/router/router');
-const database = require('./lib/db');
+const database = require('./lib/db/database');
 const createActions = require('./lib/actions/reducer');
-const now = require('./lib/now');
+const now = require('./plugins/now');
 
 module.exports = { router, database, createActions, now };
