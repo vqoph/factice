@@ -23,27 +23,4 @@ context('Network Requests', () => {
     cy.wait('@plural');
     cy.get('#resultTarget').contains('first');
   });
-
-  xit('use factice.get() with query parameters', () => {
-    cy.route({
-      method: 'GET',
-      url: '*/plurals',
-      ...cy.factice.get({
-        resource: 'plurals',
-        query: { sort: 'price', order: 'ASC', page: 1 },
-      }),
-    });
-
-    cy.get('[data-cy=fetchPlurals]').click();
-  });
-
-  xit('use factice.get() with pagination headers', () => {
-    cy.route({
-      method: 'GET',
-      url: '*/plurals',
-      ...cy.factice.get({ resource: 'plurals', query: { page: 1 } }),
-    });
-
-    cy.get('[data-cy=fetchPlurals]').click();
-  });
 });
