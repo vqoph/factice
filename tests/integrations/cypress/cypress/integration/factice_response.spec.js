@@ -1,39 +1,34 @@
 /// <reference types="cypress" />
 
-import sourceDb from '../../sample-db.json';
-import factice from 'factice/plugins/cypress';
-
 context('Network Requests', () => {
   beforeEach(() => {
-    factice.init({ data: sourceDb });
     cy.visit('http://localhost:5000');
-    cy.server();
   });
 
   // Manage AJAX / XHR requests in your app
-  it('use factice.response() to stub xhr with factice plural content', () => {
-    cy.route({
-      method: 'GET',
-      url: '*/plurals',
-      ...factice.response({ resource: 'plurals' }),
-    });
-
+  it('use factice.request() to compare result from  fake api', () => {
+    const { response } = cy.factice.request({ resource: 'plurals' });
+    cy.intercept({ method: 'GET', url: '/plurals' }).as('plurals');
     cy.get('[data-cy=fetchPlurals]').click();
+    cy.wait('@plurals');
+    cy.get('#resultTarget').contains(response[0].text);
   });
 
-  it('use factice.response() with id', () => {
-    cy.route({
-      method: 'GET',
-      url: '*/plurals/*',
-      ...factice.response({ resource: 'plurals/:id', id: 'second' }),
-    });
+  it('use factice.handle() to mock resource', () => {
+    cy.intercept(
+      { method: 'GET', url: /\/plurals\/(.)*/ },
+      cy.factice.handler({ resource: 'plurals/:id', id: 'first' })
+    ).as('plural');
+    cy.get('[data-cy=fetchPlural]').click();
+    cy.wait('@plural');
+    cy.get('#resultTarget').contains('first');
   });
 
-  it('use factice.response() with query parameters', () => {
+  xit('use factice.get() with query parameters', () => {
     cy.route({
       method: 'GET',
       url: '*/plurals',
-      ...factice.response({
+      ...cy.factice.get({
         resource: 'plurals',
         query: { sort: 'price', order: 'ASC', page: 1 },
       }),
@@ -42,11 +37,11 @@ context('Network Requests', () => {
     cy.get('[data-cy=fetchPlurals]').click();
   });
 
-  it('use factice.response() with pagination headers', () => {
+  xit('use factice.get() with pagination headers', () => {
     cy.route({
       method: 'GET',
       url: '*/plurals',
-      ...factice.response({ resource: 'plurals', query: { page: 1 } }),
+      ...cy.factice.get({ resource: 'plurals', query: { page: 1 } }),
     });
 
     cy.get('[data-cy=fetchPlurals]').click();
