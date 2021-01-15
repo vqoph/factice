@@ -1,3 +1,4 @@
-const jsonServerLite = require('factice/integrations/now');
-const data = require('./api.json');
-module.exports = jsonServerLite(data);
+const factice = require('factice/plugins/now');
+const data = require('./sample-db.json');
+
+module.exports = factice(data, {});
