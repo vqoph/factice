@@ -122,3 +122,5 @@ dist
 tests/*/package-lock.json
 tests/newman/sample-db.postman_collection.json
 tests/integrations/cypress/cypress/screenshots
+tests/integrations/cypress/cypress/videos
+
