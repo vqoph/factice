@@ -1,40 +1,63 @@
-/// <reference types="cypress" />
-
 const createActionsFromDB = require('../lib/actions/reducer');
-const database = require('../lib/db');
+const database = require('../lib/db/database');
 
-class FacticePlugin {
+module.exports = class FacticeCypressPlugin {
   /** @type {any} */
-  actions = {};
+  #actions = {};
+
+  /** @type {any} */
+  #data = null;
 
   /**
-   * @param {{data: any, host?:string}} config
+   * @param {{data?: any, host?:string}} config
    */
   constructor({ data }) {
-    const db = database(data);
-    this.actions = createActionsFromDB(db);
+    if (data) {
+      this.#data = data;
+      this.#init(data);
+    }
   }
 
   /**
-   * Return response from factice data
-   * @param {{resource: string, id?: string, query?: any, params?: any, protocol?:string}} config
+   * Handle response and headers from factice data
+   * @param {{resource: string, id?: string, query?: any, params?: any, protocol?:string, method?:string}} config
+   */
+  handler(config) {
+    return () => this.#request(config);
+  }
+
+  /**
+   * Return response and headers from factice data
+   * @param {{resource: string, id?: string, query?: any, params?: any, protocol?:string, method?:string}} config
+   */
+  request(config) {
+    return this.#request(config);
+  }
+
+  /**
+   * Restore factice database with initial datas
    */
 
-  response({
+  reset() {
+    this.#init(this.#data);
+  }
+
+  #init(data) {
+    const db = database(data);
+    this.#actions = createActionsFromDB(db);
+  }
+
+  #request({
     resource: resourceName,
     id = undefined,
     query = {},
     params = {},
     protocol = undefined,
+    method = 'GET',
   }) {
     /** @type {{ model: LodashWrapper, methods: any }} */
-    const action = this.actions[resourceName];
-
-    const mockReq = {
-      query,
-      params,
-      protocol,
-    };
+    const action = this.#actions[resourceName];
+    const mockReq = { query, params, protocol };
 
     if (resourceName.match(':id')) {
       if (id) {
@@ -46,38 +69,17 @@ class FacticePlugin {
       }
     }
 
-    const result = action.methods.get(mockReq, {
+    const result = action.methods[method.toLowerCase](mockReq, {
       parentResourceName: null,
       parentId: null,
     });
 
     const headers = result.headers
-      ? result.headers.reduce((acc, { name, value }) => {
-          return { ...acc, [name]: value };
-        }, {})
+      ? result.headers.reduce(
+          (acc, { name, value }) => ({ ...acc, [name]: value }),
+          {}
+        )
       : {};
     return { response: result.value, headers };
   }
-}
-
-/** @type FacticePlugin */
-let instance;
-
-module.exports = {
-  /**
-   * init factice instance singleton
-   * @param {{data: any, host?:string}} config
-   */
-  init({ data }) {
-    if (!instance) instance = new FacticePlugin({ data });
-  },
-
-  /**
-   * Return response from factice data
-   * @param {{resource: string, id?: string, query?: any, params?: any, protocol?:string}} config
-   */
-  response(config) {
-    if (!instance) throw Error('Factice need to be initialized with factice.init()');
-    else return instance.response(config);
-  },
 };
