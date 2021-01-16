@@ -28,14 +28,14 @@
       <button onclick="fetchPlurals()" data-cy="fetchPlurals">Get plurals</button>
       <button onclick="fetchPlural()" data-cy="fetchPlural">Get plural</button>
     </div>
-    <script src="./axios.min.js" type="text/javascript"></script>
     <script>
       let resultTarget = document.getElementById('resultTarget');
 
       async function fetchPlurals() {
         try {
-          const response = await axios.get('http://localhost:3000/api/plurals');
-          resultTarget.innerText = JSON.stringify(response.data, null, 4);
+          const req = await fetch('http://localhost:3000/api/plurals');
+          const res = await req.json();
+          resultTarget.innerText = JSON.stringify(res, null, 4);
         } catch (e) {
           resultTarget.innerText = e;
         }
@@ -43,10 +43,9 @@
 
       async function fetchPlural() {
         try {
-          const response = await axios.get(
-            'http://localhost:3000/api/plurals/second'
-          );
-          resultTarget.innerText = JSON.stringify(response.data, null, 4);
+          const req = await fetch('http://localhost:3000/api/plurals/second');
+          const res = await req.json();
+          resultTarget.innerText = JSON.stringify(res, null, 4);
         } catch (e) {
           resultTarget.innerText = e;
         }
