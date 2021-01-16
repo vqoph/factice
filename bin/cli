@@ -2,9 +2,9 @@
 const fs = require('fs');
 const yargs = require('yargs');
 const pkg = require('../package.json');
-const server = require('../lib/server');
-const logger = require('../lib/logger/logger');
-const generatePostman = require('../lib/postman/collection');
+const logger = require('../src/lib/logger/logger');
+const server = require('../src/lib/server');
+const generatePostman = require('../src/lib/postman/collection');
 
 const argv =
   //
@@ -109,7 +109,7 @@ switch (command) {
     server({ source, ...cliArguments });
     break;
 
-  case 'postman':
+  case 'postman': {
     // Generate a postman collection using path
     const name = source.split('/').pop().replace('.json', '');
     fs.writeFileSync(
@@ -118,6 +118,7 @@ switch (command) {
     );
 
     break;
+  }
 
   default:
     logger.error(`Unrecognized command ${command}`, { scope: 'cli' });

@@ -22,8 +22,9 @@ module.exports = class FacticeCypressPlugin {
    * Handle response and headers from factice data
    * @param {{resource: string, id?: string, query?: any, params?: any, protocol?:string, method?:string}} config
    */
-  handler(config) {
-    return () => this.#request(config);
+  reply(config) {
+    const { response } = this.#request(config);
+    return (req) => req.reply(response);
   }
 
   /**
@@ -69,7 +70,7 @@ module.exports = class FacticeCypressPlugin {
       }
     }
 
-    const result = action.methods[method.toLowerCase](mockReq, {
+    const result = action.methods[method.toLowerCase()](mockReq, {
       parentResourceName: null,
       parentId: null,
     });
