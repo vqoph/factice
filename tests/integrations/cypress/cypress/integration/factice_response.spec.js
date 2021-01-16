@@ -7,17 +7,17 @@ context('Network Requests', () => {
 
   // Manage AJAX / XHR requests in your app
   it('use factice.request() to compare result from  fake api', () => {
-    const { response } = cy.factice.request({ resource: 'plurals' });
     cy.intercept({ method: 'GET', url: '/plurals' }).as('plurals');
+    const { response } = cy.factice.request({ resource: 'plurals' });
     cy.get('[data-cy=fetchPlurals]').click();
     cy.wait('@plurals');
     cy.get('#resultTarget').contains(response[0].text);
   });
 
-  it('use factice.handle() to mock resource', () => {
+  it('use factice.reply() to mock resource', () => {
     cy.intercept(
       { method: 'GET', url: /\/plurals\/(.)*/ },
-      cy.factice.handler({ resource: 'plurals/:id', id: 'first' })
+      cy.factice.reply({ resource: 'plurals/:id', id: 'first' })
     ).as('plural');
     cy.get('[data-cy=fetchPlural]').click();
     cy.wait('@plural');

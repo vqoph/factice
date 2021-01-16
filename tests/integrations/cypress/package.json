@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.12.1",
     "concurrently": "^5.2.0",
     "cypress": "^6.2.1",
     "factice": "file:../../..",

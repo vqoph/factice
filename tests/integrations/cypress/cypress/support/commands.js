@@ -25,6 +25,5 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import data from '../../../../fixtures/sample-db.json';
-import FacticeCypressPlugin from '../../../../../plugins/cypress';
-
-Cypress.Commands.add('factice', new FacticeCypressPlugin({ data }));
+import { FacticeCypressPlugin } from 'factice';
+Cypress.cy.factice = new FacticeCypressPlugin({ data });
