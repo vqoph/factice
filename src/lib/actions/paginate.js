@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 function getPage(allItems, page, perPage) {
   const start = (page - 1) * perPage;
   const end = page * perPage;
@@ -29,8 +31,6 @@ function getPage(allItems, page, perPage) {
  */
 
 module.exports = (pagination, fullUrl, chain) => {
-  const _ = chain._;
-
   let { start, page, end, limit } = _.mapValues(
     pagination,
     (value) => parseInt(value, 10) || 0

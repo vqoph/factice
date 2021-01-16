@@ -2,14 +2,14 @@
   "name": "factice",
   "version": "1.0.0",
   "description": "Mock a REST api from json files",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel src -d dist",
     "test": "npm run test:e2e:generate && npm run test:e2e",
     "test:e2e:generate": "./bin/cli postman -p 3001 -d ./tests/newman/ ./tests/fixtures/sample-db.json",
     "test:newman": "newman run ./tests/newman/sample-db.postman_collection.json",
     "test:e2e": "concurrently  --kill-others --success=first 'npm:test:newman' 'npm:test:run:server'",
     "test:run:server": "export NODE_ENV=production; ./bin/cli run -p=3001 --fake=true --quiet=false ./tests/fixtures/sample-db.json",
-    "build": "exit 0",
     "dev": "nodemon --ext js,json -w . --exec 'npm run serve'",
     "serve": "export NODE_ENV=development; ./bin/cli run ./tests/fixtures/sample-db.json"
   },
@@ -45,10 +45,12 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-private-methods": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
     "concurrently": "^5.2.0",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
