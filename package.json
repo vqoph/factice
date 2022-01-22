@@ -37,7 +37,7 @@
     "lodash": "^4.17.19",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
-    "nanoid": "^3.1.20",
+    "nanoid": "^3.1.31",
     "pluralize": "^8.0.0",
     "url": "^0.11.0",
     "whatwg-fetch": "^3.0.0",
