@@ -15,7 +15,7 @@
     "concurrently": "^5.2.0",
     "cypress": "^6.2.1",
     "factice": "file:../../..",
-    "serve": "^11.3.0"
+    "serve": "^14.1.1"
   },
   "dependencies": {
     "uuid": "^8.0.0"
